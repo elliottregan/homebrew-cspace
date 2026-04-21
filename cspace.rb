@@ -5,23 +5,23 @@
 class Cspace < Formula
   desc "Portable CLI for managing Claude Code devcontainer instances"
   homepage "https://github.com/elliottregan/cspace"
-  version "0.8.0"
+  version "0.9.1"
   license "LicenseRef-PolyForm-Perimeter-1.0.0"
 
   depends_on "docker" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/elliottregan/cspace/releases/download/v0.8.0/cspace_darwin_amd64.zip"
-      sha256 "109a0f4a80d471f90cc228528e09f1aa38ae99e3522504f24e87fc9be40dbee9"
+      url "https://github.com/elliottregan/cspace/releases/download/v0.9.1/cspace_darwin_amd64.zip"
+      sha256 "56ff3d3fc1b1804e0975368f4c59b32309aae61e17dc2ae99385540460c2ce94"
 
       define_method(:install) do
         bin.install "cspace"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/elliottregan/cspace/releases/download/v0.8.0/cspace_darwin_arm64.zip"
-      sha256 "e6a65366e211c0e410c0db1b16415a69a7e64603057ec8bfe91fa2f8b323136d"
+      url "https://github.com/elliottregan/cspace/releases/download/v0.9.1/cspace_darwin_arm64.zip"
+      sha256 "67380cca39ecea909d295e5524d0a8afeb53ec1b8295338a1ac805fa2ab51046"
 
       define_method(:install) do
         bin.install "cspace"
@@ -31,15 +31,15 @@ class Cspace < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/elliottregan/cspace/releases/download/v0.8.0/cspace_linux_amd64.tar.gz"
-      sha256 "d362a02e8027925febf9ce4ab8c2714655eb37876c74cb993ac64c38f58d66b2"
+      url "https://github.com/elliottregan/cspace/releases/download/v0.9.1/cspace_linux_amd64.tar.gz"
+      sha256 "254a37e8e8cb524ccf3ecdad6fb148ded8fea18e9440873ae792a3ae9f1a5cdc"
       define_method(:install) do
         bin.install "cspace"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/elliottregan/cspace/releases/download/v0.8.0/cspace_linux_arm64.tar.gz"
-      sha256 "281bc8f2bc4c69a0649c7cefa69c23ff035254afc714cb203471bacba654f3fa"
+      url "https://github.com/elliottregan/cspace/releases/download/v0.9.1/cspace_linux_arm64.tar.gz"
+      sha256 "51af899624952cc160bfc07a4963a057de8ad6a611833d7f40d46db6574c87ce"
       define_method(:install) do
         bin.install "cspace"
       end
